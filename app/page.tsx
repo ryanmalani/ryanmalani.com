@@ -6,6 +6,7 @@ import Particles from "./components/particles";
 import { useGlitch } from 'react-powerglitch';
 
 import { Analytics } from '@vercel/analytics/react';
+import { Button } from "./components/ui/button";
 
 const navigation = [
 	{ name: "Blog", href: "/blog" },
@@ -22,13 +23,15 @@ export default function Home() {
 			<nav className="my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-4">
 					{navigation.map((item) => (
-						<Link
-							key={item.href}
-							href={item.href}
-							className="text-xl text-bold duration-500 text-zinc-300 hover:text-zinc-100"
-						>
-							{item.name}
-						</Link>
+						<Button variant={"outline"}>
+							<Link
+								key={item.href}
+								href={item.href}
+								className="text-xl text-bold duration-500 text-zinc-300 hover:text-zinc-100"
+							>
+								{item.name}
+							</Link>
+						</Button>
 					))}
 				</ul>
 			</nav>
