@@ -29,26 +29,26 @@ export const Navigation: React.FC = () => {
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
-						<Button variant={"outline"}>
+						<Button className="bg-zinc-300" variant={"default"} asChild>
 							<Link
 								href="/blog"
-								className="duration-200 text-zinc-400 hover:text-zinc-100"
+								className="duration-200 hover:bg-black hover:text-zinc-100"
 							>
 								Blog
 							</Link>
 						</Button>
-						<Button variant={"outline"}>
+						<Button className="bg-zinc-300" variant={"default"} asChild>
 							<Link
 								href="/projects"
-								className="duration-200 text-zinc-400 hover:text-zinc-100"
+								className="duration-200 hover:bg-black hover:text-zinc-100"
 							>
 								Projects
 							</Link>
 						</Button>
-						<Button variant={"outline"}>
+						<Button className="bg-zinc-300" variant={"default"} asChild>
 							<Link
 								href="/contact"
-								className="duration-200 text-zinc-400 hover:text-zinc-100"
+								className="duration-200 hover:bg-black hover:text-zinc-100"
 							>
 								Contact
 							</Link>
