@@ -8,6 +8,7 @@ import { useGlitch } from 'react-powerglitch';
 import { Analytics } from '@vercel/analytics/react';
 
 const navigation = [
+	{ name: "Blog", href: "/blog" },
 	{ name: "Projects", href: "/projects" },
 	{ name: "Contact", href: "/contact" },
 ];
@@ -24,7 +25,7 @@ export default function Home() {
 						<Link
 							key={item.href}
 							href={item.href}
-							className="text-lg text-bold duration-500 text-zinc-300 hover:text-zinc-100"
+							className="text-xl text-bold duration-500 text-zinc-300 hover:text-zinc-100"
 						>
 							{item.name}
 						</Link>
