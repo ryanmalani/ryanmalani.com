@@ -40,13 +40,13 @@ export default function Home() {
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={100}
 			/>
-			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
 			<span ref={glitch.ref} className="text-zinc-300">Ryan Malani</span>
 			</h1>
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
-				<h2 className="text-md text-zinc-500 ">
+				<h2 className="text-lg text-zinc-500 ">
 					Welcome to my site, here I'll share some of my thoughts and ideas around tech and life in general. I'm currently working on solutions at {" "}
 					<Link
 						target="_blank"
