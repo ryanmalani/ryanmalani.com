@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { allProjects } from "contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
@@ -17,7 +17,7 @@ type Props = {
 const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
-	return allProjects
+	return allPosts
 		.filter((p) => p.published)
 		.map((p) => ({
 			slug: p.slug,
@@ -26,22 +26,22 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 
 export default async function PostPage({ params }: Props) {
 	const slug = params?.slug;
-	const project = allProjects.find((project) => project.slug === slug);
+	const post = allPosts.find((post) => post.slug === slug);
 
-	if (!project) {
+	if (!post) {
 		notFound();
 	}
 
 	const views =
-		(await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+		(await redis.get<number>(["pageviews", "Posts", slug].join(":"))) ?? 0;
 
 	return (
 		<div className="bg-zinc-50 min-h-screen">
-			<Header project={project} views={views} />
-			<ReportView slug={project.slug} />
+			<Header post={post} views={views} />
+			<ReportView slug={post.slug} />
 
 			<article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-				<Mdx code={project.body.code} />
+				<Mdx code={post.body.code} />
 			</article>
 		</div>
 	);
