@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 	},
 	description: "Solutions Architect at INflow Federal",
 	openGraph: {
-		title: "ryanmalani.com",
+		title: "Ryan Malani",
 		description:
 			"Solutions Architect at INflow Federal",
 		url: "https://ryanmalani.com",
 		siteName: "ryanmalani.com",
 		images: [
 			{
-				url: "https://ryanmalani.com/og.png", //need to update this later as well as favicon and planetfall
-				width: 1920,
-				height: 1080,
+				url: "https://ryanmalani.com/og.png", 
+				width: 1000,
+				height: 250,
 			},
 		],
 		locale: "en-US",
